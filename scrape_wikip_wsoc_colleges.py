@@ -6,31 +6,31 @@
 import pandas as pd
 
 def menu():
-    print("\n*** COLLEGE EXPORT MAIN MENU ***\n\n [1] Export D1 Table\n [2] Export D2 Table\n [3] Export D3 Table\n [4] Export NAIA Table\n [5] Quit\n")
+    print("\n*** MAIN MENU ***\n\n [1] Create D1 Sheet\n [2] Create D2 Sheet\n [3] Create D3 Sheet\n [4] Create NAIA Sheet\n [5] Quit\n")
 
 def d1():
     wiki_url = 'https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_women%27s_soccer_programs'
     df = pd.read_html(wiki_url)
     df[0].to_csv('wsoc_d1.csv', index=False)
-    print("\n....... D1 table exported!\n\n")
+    print("\n....... D1 table created!\n\n")
 
 def d2():
     wiki_url = 'https://en.wikipedia.org/wiki/List_of_NCAA_Division_II_women%27s_soccer_programs'
     df = pd.read_html(wiki_url)
     df[0].to_csv('wsoc_d2.csv', index=False)
-    print("\n....... D2 table exported!\n\n")
+    print("\n....... D2 table created!\n\n")
 
 def d3():
     wiki_url = 'https://en.wikipedia.org/wiki/List_of_NCAA_Division_III_institutions'
     df = pd.read_html(wiki_url)
     df[0].to_csv('wsoc_d3.csv', index=False)
-    print("\n....... D3 table exported!\n\n")
+    print("\n....... D3 table created!\n\n")
 
 def naia():
     wiki_url = 'https://en.wikipedia.org/wiki/List_of_NAIA_institutions'
     df = pd.read_html(wiki_url)
     df[0].to_csv('wsoc_naia.csv', index=False)
-    print("\n....... NAIA table exported!\n\n")
+    print("\n....... NAIA table created!\n\n")
 
 while True:
     menu()
